@@ -62,17 +62,36 @@
         .btn {
             display: inline-block;
             padding: 12px 24px;
-            border-radius: 25px;
+            border-radius: 999px;
             font-weight: 600;
             font-size: 1rem;
             cursor: pointer;
-            transition: box-shadow 0.3s, background 0.3s, color 0.3s;
+            transition: all 0.3s ease-in-out;
             text-decoration: none;
         }
-        .btn-primary { background: #ffffff; color: #6e00ff; border: none; }
-        .btn-primary:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-        .btn-outline { background: transparent; border: 2px solid #ffffff; color: #ffffff; }
-        .btn-outline:hover { background: rgba(255,255,255,0.1); }
+        .btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(0,0,0,0.2);
+        }
+        .btn-primary {
+            background: #ffffff;
+            color: #6e00ff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #6e00ff 0%, #c56cf0 100%);
+            color: #ffffff;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+        }
+        .btn-outline:hover {
+            background: rgba(0,0,0,0.1);
+            border-color: #c56cf0;
+            transform: scale(1.05);
+        }
         .tabs { display: flex; gap: 20px; justify-content: center; }
         .tabs a { padding: 10px 20px; border-radius: 20px; color: #ffffff; text-decoration: none; font-weight: 500; opacity: 0.7; transition: background 0.3s, opacity 0.3s; }
         .tabs a.active { background: rgba(255,255,255,0.2); opacity: 1; }

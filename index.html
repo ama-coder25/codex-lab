@@ -15,7 +15,7 @@
         }
         .hero {
             background: linear-gradient(135deg, #6e00ff 0%, #c56cf0 100%);
-            padding: 60px 20px 100px;
+            padding: 100px 20px 180px;
             text-align: center;
             color: #ffffff;
             position: relative;
@@ -76,7 +76,12 @@
         .tabs { display: flex; gap: 20px; justify-content: center; }
         .tabs a { padding: 10px 20px; border-radius: 20px; color: #ffffff; text-decoration: none; font-weight: 500; opacity: 0.7; transition: background 0.3s, opacity 0.3s; }
         .tabs a.active { background: rgba(255,255,255,0.2); opacity: 1; }
-        .wave { position: absolute; bottom: 0; left: 0; width: 100%; }
+        .wave {
+            position: absolute;
+            bottom: -60px;
+            left: 0;
+            width: 100%;
+        }
         .features {
             background: #ffffff;
             padding: 60px 20px;
@@ -104,6 +109,11 @@
         @media (min-width: 768px) {
             h1 { font-size: 3rem; }
             .subtitle { font-size: 1.25rem; }
+        }
+        @media (max-width: 600px) {
+            .hero {
+                padding-bottom: 220px;
+            }
         }
     </style>
 </head>

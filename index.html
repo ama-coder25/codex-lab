@@ -7,23 +7,68 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: #ffffff; color: #ffffff; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
         .hero {
             background: linear-gradient(135deg, #6e00ff 0%, #c56cf0 100%);
-            padding: 60px 40px 120px;
+            padding: 60px 20px 100px;
             text-align: center;
+            color: #ffffff;
             position: relative;
             overflow: hidden;
         }
-        nav.main-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 80px; }
-        nav.main-nav ul { display: flex; list-style: none; gap: 30px; }
-        nav.main-nav a { color: #ffffff; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
-        nav.main-nav a:hover { opacity: 0.8; }
-        nav.main-nav .actions { display: flex; gap: 20px; }
-        h1 { font-size: 3rem; margin-bottom: 20px; }
-        .subtitle { font-size: 1.25rem; opacity: 0.9; margin-bottom: 40px; }
-        .cta { display: flex; gap: 20px; justify-content: center; margin-bottom: 40px; }
-        .btn { padding: 14px 28px; border-radius: 25px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: box-shadow 0.3s, background 0.3s, color 0.3s; text-decoration: none; }
+        nav.main-nav {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        nav.main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        nav.main-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        nav.main-nav a:hover {
+            opacity: 0.8;
+        }
+        nav.main-nav .actions {
+            display: flex;
+            gap: 16px;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        .subtitle { font-size: 1.2rem; opacity: 0.9; margin-bottom: 30px; }
+        .cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: box-shadow 0.3s, background 0.3s, color 0.3s;
+            text-decoration: none;
+        }
         .btn-primary { background: #ffffff; color: #6e00ff; border: none; }
         .btn-primary:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
         .btn-outline { background: transparent; border: 2px solid #ffffff; color: #ffffff; }
@@ -32,21 +77,49 @@
         .tabs a { padding: 10px 20px; border-radius: 20px; color: #ffffff; text-decoration: none; font-weight: 500; opacity: 0.7; transition: background 0.3s, opacity 0.3s; }
         .tabs a.active { background: rgba(255,255,255,0.2); opacity: 1; }
         .wave { position: absolute; bottom: 0; left: 0; width: 100%; }
+        .features {
+            background: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 960px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+        .card {
+            flex: 1 1 250px;
+            background: #f7f7f7;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .card .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        @media (min-width: 768px) {
+            h1 { font-size: 3rem; }
+            .subtitle { font-size: 1.25rem; }
+        }
     </style>
 </head>
 <body>
     <div class="hero">
         <nav class="main-nav">
             <ul>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Use Cases</a></li>
-                <li><a href="#">Templates</a></li>
-                <li><a href="#">Resources</a></li>
-                <li><a href="#">Pricing</a></li>
+                <li><a href="#features">Product</a></li>
+                <li><a href="#features">Use Cases</a></li>
+                <li><a href="#features">Templates</a></li>
+                <li><a href="#features">Resources</a></li>
+                <li><a href="#features">Pricing</a></li>
             </ul>
             <div class="actions">
-                <a href="#" class="btn btn-outline" style="padding:8px 20px;">Log in</a>
-                <a href="#" class="btn btn-primary" style="padding:8px 20px;">Sign up</a>
+                <a href="#" class="btn btn-outline">Log in</a>
+                <a href="#" class="btn btn-primary">Sign up</a>
             </div>
         </nav>
         <h1>Win more deals. Pitch.</h1>
@@ -62,8 +135,27 @@
             <a href="#">Analyze</a>
         </div>
         <svg class="wave" viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#ffffff" d="M0,288L48,288C96,288,192,288,288,266.7C384,245,480,203,576,176C672,149,768,139,864,154.7C960,171,1056,213,1152,213.3C1248,213,1344,171,1392,149.3L1440,128V320H1392C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320H0Z"></path>
+            <path fill="#ffffff" d="M0 160 C360 220 360 100 720 160 C1080 220 1080 100 1440 160 V320 H0 Z" />
         </svg>
     </div>
+    <section id="features" class="features">
+        <div class="features-container">
+            <div class="card">
+                <div class="icon">📊</div>
+                <h3>Pitch</h3>
+                <p>Create modern presentations quickly.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🎨</div>
+                <h3>Design</h3>
+                <p>Customize slides to fit your brand.</p>
+            </div>
+            <div class="card">
+                <div class="icon">📈</div>
+                <h3>Analyze</h3>
+                <p>Track engagement and success.</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

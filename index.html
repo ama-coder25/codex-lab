@@ -1,29 +1,39 @@
-<!-- refresh -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Codex Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin-top: 0;
+            font-size: 2.5em;
+        }
+    </style>
+</head>
+    <link rel="stylesheet" href="style.css">
+    </head>
 <body>
-    <nav class="navbar">
-        <a href="#home">Главная</a>
-        <a href="#about">О нас</a>
-        <a href="#contacts">Контакты</a>
-    </nav>
-
-    <section id="home" class="container">
+    <div class="container">
         <h1>Codex Lab</h1>
         <p>Добро пожаловать в Codex Lab!</p>
-    </section>
-
-    <section id="about" class="container">
-        <h2>О нас</h2>
-        <p>Раздел информации о лаборатории.</p>
-    </section>
-
-    <section id="contacts" class="container">
-        <h2>Контакты</h2>
-        <p>Как с нами связаться.</p>
-    </section>
+    </div>
 </body>
 </html>

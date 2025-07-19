@@ -4,16 +4,38 @@
     <meta charset="UTF-8">
     <title>Codex Lab</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
             color: #333;
             margin: 0;
             padding: 0;
+        }
+        .navbar {
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background: #f0f0f0;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px 16px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #e0e0e0;
+        }
+        .section {
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
         }
         .container {
             text-align: center;
@@ -28,12 +50,29 @@
         }
     </style>
 </head>
-    <link rel="stylesheet" href="style.css">
-    </head>
 <body>
-    <div class="container">
-        <h1>Codex Lab</h1>
-        <p>Добро пожаловать в Codex Lab!</p>
-    </div>
+    <nav class="navbar">
+        <a href="#home">Главная</a>
+        <a href="#about">О нас</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+    <section id="home" class="section">
+        <div class="container">
+            <h1>Codex Lab</h1>
+            <p>Добро пожаловать в Codex Lab!</p>
+        </div>
+    </section>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>О нас</h2>
+            <p>Мы создаем интересные проекты и делимся знаниями.</p>
+        </div>
+    </section>
+    <section id="contacts" class="section">
+        <div class="container">
+            <h2>Контакты</h2>
+            <p>Свяжитесь с нами по электронной почте example@example.com.</p>
+        </div>
+    </section>
 </body>
 </html>
